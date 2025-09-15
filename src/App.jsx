@@ -1,12 +1,11 @@
 import React from "react";
 import "./index.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router";
 import CampaignPage from "./pages/CampaignPage.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route index path="/:campaginid" element={<CampaignPage />} />
       <Route
         path="/"
         element={
@@ -20,6 +19,7 @@ function App() {
           </div>
         }
       />
+      <Route path="/:campaginid" element={<CampaignPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
