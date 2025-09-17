@@ -20,7 +20,7 @@ function App() {
         }
       />
       <Route path="/:campaginid" element={<CampaignPage />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<div className="text-center text-2xl font-semibold">404</div>} />
     </Routes>
   );
 }
